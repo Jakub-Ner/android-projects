@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/fragment_left"
+        android:title="Left"
+        app:showAsAction="always"
+        android:icon="@drawable/left"
+        />
+
+    <item android:id="@+id/fragment_center"
+        android:title="right"
+        app:showAsAction="always"
+        android:icon="@drawable/home"
+        />
+
+    <item android:id="@+id/fragment_right"
+        android:title="right"
+        app:showAsAction="always"
+        android:icon="@drawable/right"
+        />
+</menu>

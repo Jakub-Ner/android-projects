@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentEditItem"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment2.EditItemFragment"
+    android:padding="16dp"
+    >
+
+    <CheckBox
+        android:id="@+id/checkBoxItemType"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="Is Checked?" />
+
+    <EditText
+        android:id="@+id/editTextItemName"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name" />
+
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type:"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbCoffee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coffee Mug" />
+
+        <RadioButton
+            android:id="@+id/rbTea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cup of Tea" />
+
+        <RadioButton
+            android:id="@+id/rbEnergyDrink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Energy Drink" />
+    </RadioGroup>
+
+
+    <RatingBar
+        android:id="@+id/ratingBarItemValue"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

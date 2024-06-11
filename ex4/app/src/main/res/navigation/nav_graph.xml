@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.exercise04.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_list1_fragment"
+        android:name="com.example.exercise04.List1Fragment"
+        android:label="@string/menu_list1_fragment"
+        tools:layout="@layout/fragment_list1" />
+
+    <fragment
+        android:id="@+id/nav_list2_fragment"
+        android:name="com.example.exercise04.fragment2.List2Fragment"
+        android:label="@string/menu_list2_fragment"
+        tools:layout="@layout/fragment_list2">
+        <action
+            android:id="@+id/action_list2_to_item_info"
+            app:destination="@id/nav_item_info_fragment" />
+        <action
+            android:id="@+id/action_list2_to_add_item"
+            app:destination="@id/nav_add_item_fragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_view_pager_fragment"
+        android:name="com.example.exercise04.ViewPagerFragment"
+        android:label="@string/menu_view_pager_fragment"
+        tools:layout="@layout/fragment_view_pager" />
+
+    <fragment
+        android:id="@+id/nav_item_info_fragment"
+        android:name="com.example.exercise04.fragment2.ItemInfoFragment"
+        android:label="@string/mnu_view_item_info"
+        tools:layout="@layout/fragment_item_info" >
+        <action
+            android:id="@+id/action_nav_item_info_fragment_to_nav_edit_item_fragment"
+            app:destination="@id/nav_edit_item_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_item_fragment"
+        android:name="com.example.exercise04.fragment2.AddItemFragment"
+        android:label="@string/mnu_view_add_item"
+        tools:layout="@layout/fragment_add_item" />
+
+    <fragment
+        android:id="@+id/nav_edit_item_fragment"
+        android:name="com.example.exercise04.fragment2.EditItemFragment"
+        tools:layout="@layout/fragment_edit_item"
+        android:label="@string/mnu_view_edit_item"
+        />
+
+    <fragment
+        android:id="@+id/nav_photo_list_fragment"
+        android:name="com.example.exercise04.photos.PhotoListFragment"
+        android:label="fragment_photo_list"
+        tools:layout="@layout/fragment_photo_list" >
+        <action
+            android:id="@+id/action_nav_photo_list_fragment_to_swipePhotoFragment"
+            app:destination="@id/swipePhotoFragment" />
+        <action
+            android:id="@+id/action_nav_photo_list_fragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/swipePhotoFragment"
+        android:name="com.example.exercise04.photos.SwipePhotoFragment"
+        android:label="fragment_swipe_photo"
+        tools:layout="@layout/fragment_swipe_photo" >
+        <action
+            android:id="@+id/action_swipePhotoFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+</navigation>
